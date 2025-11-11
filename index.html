@@ -12,6 +12,7 @@
     />
 
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png">
   </head>
 
   <body>
@@ -28,6 +29,13 @@
         <a href="#contact">Contact</a>
       </nav>
     </header>
+
+    <div class="scroll-down" id="scrollIndicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </div>
 
     <section class="home" id="home">
       <div class="home-content">
@@ -223,5 +231,15 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
     <script src="script.js"></script>
+
+    <script>window.addEventListener("scroll", () => {
+      const scrollIndicator = document.getElementById("scrollIndicator");
+        if (window.scrollY > 100) {
+        scrollIndicator.classList.add("hidden");
+      } else {
+       scrollIndicator.classList.remove("hidden");
+     }
+    });
+    </script>
   </body>
 </html>
